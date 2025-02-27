@@ -1,6 +1,10 @@
 import struct
 import os
 
+
+# 用于中心L0数据，提取图像数据，并生成hdr
+
+
 def change_file_extension(input_file, new_addname, new_extension):
     # 分离文件名和扩展名
     base_name, _ = os.path.splitext(input_file)
@@ -76,4 +80,4 @@ sensor type = Unknown
 
 
 # 调用函数，提取图像数据并保存为二进制文件
-extract_image_data('E:/BaiduNetdiskDownload/925843/ZY1F_AHSI_VNIR_20250213_760_129_L00000925843.DAT', 'E:/BaiduNetdiskDownload/925843/output_image_data.bin',76)
+extract_image_data('E:/解压缩linshi/925026/ZY1F_AHSI_VNIR_20250212_210_214_L00000925029.DAT', 'E:/解压缩linshi/925026/output_image_data.bin',76)
