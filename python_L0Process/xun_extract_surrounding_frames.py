@@ -1,6 +1,7 @@
 import os
 
 
+
 ## 用于解压后数据，提取某一帧的前10帧或后10帧
 def extract_surrounding_frames_flexible(input_file, output_file):
     """
@@ -95,5 +96,5 @@ def extract_surrounding_frames_flexible(input_file, output_file):
 # 示例调用
 if __name__ == '__main__':
     input_file = "E:/解压缩linshi/tmp_20250227_115137413_0.dat"
-    output_file = "E:/解压缩linshi/image_10_10.dat"
+    output_file = "E:/解压缩linshi/image_all.dat"
     extract_surrounding_frames_flexible(input_file, output_file)

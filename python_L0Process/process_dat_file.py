@@ -13,7 +13,7 @@ from sympy import false
 # 输入输出：
 # 输入解压后的dat文件
 # 输出 [距离上一个0915多少字节(4字节) +  0915开始的20个字节]
-def process_dat_file_streaming(input_file, output_file):
+def process_aux20_file_streaming(input_file, output_file):
     """
     流式读取 input_file，查找每个以 09 15 c0 00 开头的字节串，
     对于每个匹配：如果后续数据至少20字节，则截取20字节写入输出文件，
@@ -135,5 +135,5 @@ def check_frame_continuity(file_path, skip_size):
 
 # 示例调用
 if __name__ == '__main__':
-    # process_dat_file_streaming("E:/解压缩linshi/tmp_20250227_115137413_0.dat", "E:/解压缩linshi/frame_NO.dat")  #提取解压后图像的帧号
+    # process_aux20_file_streaming("E:/解压缩linshi/tmp_20250227_115137413_0.dat", "E:/解压缩linshi/frame_NO.dat")  #提取解压后图像的帧号
     check_frame_continuity("E:/解压缩linshi/frame_NO.dat", 24*4)  # 跳过4行空数据，判断帧号是否连续
